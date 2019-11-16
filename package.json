@@ -1,0 +1,16 @@
+{
+  "name": "listify",
+  "version": "1.0.0",
+  "description": "auto generate table of contents",
+  "main": "index.js",
+  "repository": "https://github.com/ifuture-pro",
+  "author": "ifuture",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@textlint/markdown-to-ast": "^6.1.6",
+    "fs": "^0.0.1-security",
+    "minimist": "^1.2.0",
+    "path": "^0.12.7"
+  }
+}
