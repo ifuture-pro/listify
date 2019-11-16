@@ -33,7 +33,8 @@ function findMarddownFile(dirPath) {
 
 function generateList(markdownFilePath) {
   const content = fs.readFileSync(markdownFilePath,'utf8');
-  parse({content:content});
+  return {headers:parse({content:content,options:{'maxlevel':maxlevel}}).headers,
+    title:path.basename(markdownFilePath)};
 }
 
 const args = minimist(process.argv.slice(2),
@@ -61,5 +62,11 @@ for (var i = 0; i < args._.length; i++) {
 
 }
 
-console.log(mdFiles);
-generateList(mdFiles[6]);
+let allList = [];
+for (var i = 0; i < mdFiles.length; i++) {
+  let catalogArray = generateList(mdFiles[i]);
+  allList.push('# ' + catalogArray.title + '\n' + catalogArray.headers.join('\n'));
+}
+
+fs.writeFileSync(outFile, allList.join('\n\n'), 'utf8');
+console.log('writed to "%s"',outFile)
