@@ -1,6 +1,6 @@
 {
   "name": "listify",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "auto generate table of contents",
   "main": "index.js",
   "repository": "https://github.com/ifuture-pro",

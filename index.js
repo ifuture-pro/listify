@@ -3,7 +3,7 @@
 const minimist = require('minimist');
 const fs = require('fs');
 const path = require('path');
-const parse = require('./lib/parse');
+const generateList = require('./lib/parse');
 
 const markdownExts = ['.md', '.markdown'];
 const ignoredDirs  = ['.idea', '.git', 'node_modules'];
@@ -12,9 +12,9 @@ const ignoredDirs  = ['.idea', '.git', 'node_modules'];
 function findMarddownFile(dirPath) {
 
   let dir = fs.readdirSync(dirPath);
-  dir = dir.filter(d => ignoredDirs.indexOf(d) < 0);
+  dir = dir.filter(d => ignoredDirs.indexOf(d) < 0 && dirPath + d!==config.outFile);
 
-  for (var i = 0; i < dir.length; i++) {
+  for (let i = 0; i < dir.length; i++) {
 
     const tdir = dir[i];
     const tpath = path.join(dirPath, tdir);
@@ -31,26 +31,27 @@ function findMarddownFile(dirPath) {
   }
 }
 
-function generateList(markdownFilePath) {
-  const content = fs.readFileSync(markdownFilePath,'utf8');
-  return {headers:parse({content:content,options:{'maxlevel':maxlevel}}).headers,
-    title:path.basename(markdownFilePath)};
-}
+
 
 const args = minimist(process.argv.slice(2),
-  { boolean: ['blog'],
+  { boolean: ['blog','containroot'],
     string: ['title', 'maxlevel', 'out']
   });
 
-const maxlevel = args.maxlevel || '3';
-let outFile = args.out || 'README.md';
+let config = {
+  maxlevel: args.maxlevel || '3',
+  outFile: args.out || 'README.md',
+  containRoot: args.containroot,
+  prefix: '-'
+};
 
 let mdFiles = [];
-for (var i = 0; i < args._.length; i++) {
+for (let i = 0; i < args._.length; i++) {
   let root = args._[i];
   root = (root.indexOf('~') === 0) ? process.env.HOME + root.substr(1) : root;
 
-  outFile = path.join(root, outFile);
+  config.outFile = path.join(root, config.outFile);
+  config.rootPath = root;
 
   let stat = fs.statSync(root);
 
@@ -59,14 +60,8 @@ for (var i = 0; i < args._.length; i++) {
   }else {
     mdFiles = [{path: root}];
   }
-
 }
 
-let allList = [];
-for (var i = 0; i < mdFiles.length; i++) {
-  let catalogArray = generateList(mdFiles[i]);
-  allList.push('# ' + catalogArray.title + '\n' + catalogArray.headers.join('\n'));
-}
+generateList({markdownFiles:mdFiles, options: config})
 
-fs.writeFileSync(outFile, allList.join('\n\n'), 'utf8');
-console.log('writed to "%s"',outFile)
+
