@@ -39,6 +39,7 @@ jobs:
           node-version: 10.16.3
           registry-url: https://npm.pkg.github.com/
           scope: '@ifuture-pro'
+      - run: sed -i 's/@ifuture/@ifuture-pro/g' package.json
       - run: npm ci
       - run: npm publish
         env:
