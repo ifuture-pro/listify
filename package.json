@@ -10,10 +10,7 @@
     "type": "git",
     "url": "https://github.com/ifuture-pro/listify.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "file": [
+  "files": [
     "index.js",
     "lib/"
   ],
