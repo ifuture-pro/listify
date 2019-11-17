@@ -6,11 +6,13 @@
   "scripts": {
     "test": "node index.js ./demo/"
   },
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "https://github.com/ifuture-pro/listify.git"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "file": [
     "index.js",
     "lib/"
@@ -19,6 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "@textlint/markdown-to-ast": "^6.1.6",
+    "emoji-regex": "^8.0.0",
     "fs": "^0.0.1-security",
     "minimist": "^1.2.0",
     "path": "^0.12.7"
