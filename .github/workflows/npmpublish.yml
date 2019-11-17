@@ -1,8 +1,8 @@
 name: Node.js Package
-
+# https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows
 on:
   release:
-    types: [created]
+    types: [created,edited]
 
 jobs:
   build:
