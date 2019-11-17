@@ -12,7 +12,7 @@ const ignoredDirs  = ['.idea', '.git', 'node_modules'];
 function findMarddownFile(dirPath) {
 
   let dir = fs.readdirSync(dirPath);
-  dir = dir.filter(d => ignoredDirs.indexOf(d) < 0 && dirPath + d!==config.outFile);
+  dir = dir.filter(d => ignoredDirs.indexOf(d) < 0 && path.join(dirPath, d)!== config.outFile);
 
   for (let i = 0; i < dir.length; i++) {
 
@@ -49,6 +49,7 @@ let mdFiles = [];
 for (let i = 0; i < args._.length; i++) {
   let root = args._[i];
   root = (root.indexOf('~') === 0) ? process.env.HOME + root.substr(1) : root;
+  root = (root.indexOf('.') === 0) ? process.cwd() + root.substr(1) : root;
 
   config.outFile = path.join(root, config.outFile);
   config.rootPath = root;

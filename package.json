@@ -3,10 +3,20 @@
   "version": "0.0.2",
   "description": "auto generate table of contents",
   "main": "index.js",
-  "repository": "https://github.com/ifuture-pro",
+  "scripts": {
+    "test": "node index.js ./demo/"
+  },
+  "repository" : {
+    "type" : "git",
+    "url": "https://github.com/ifuture-pro/listify.git"
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "file": [
+    "index.js",
+    "lib/"
+  ],
   "author": "ifuture",
   "license": "MIT",
-  "private": false,
   "dependencies": {
     "@textlint/markdown-to-ast": "^6.1.6",
     "fs": "^0.0.1-security",
