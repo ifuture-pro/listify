@@ -1,6 +1,6 @@
 {
   "name": "listify",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "auto generate table of contents",
   "main": "index.js",
   "scripts": {
