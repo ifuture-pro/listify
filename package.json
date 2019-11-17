@@ -1,5 +1,5 @@
 {
-  "name": "listify",
+  "name": "@ifuture/listify",
   "version": "0.0.5",
   "description": "auto generate table of contents",
   "main": "index.js",
