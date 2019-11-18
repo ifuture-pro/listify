@@ -6,6 +6,9 @@
   "scripts": {
     "test": "node index.js ./demo/"
   },
+  "bin": {
+    "listify": "index.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ifuture-pro/listify.git"

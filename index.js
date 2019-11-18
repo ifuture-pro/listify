@@ -66,6 +66,6 @@ for (let i = 0; i < args._.length; i++) {
   }
 }
 
-generateList({markdownFiles:mdFiles, options: config})
+generateList({markdownFiles:mdFiles, options: config});
 
 
