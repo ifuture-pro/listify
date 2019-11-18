@@ -1,4 +1,4 @@
-Notepad
+Example
 ---------------
 
 <!-- start listify -->
@@ -18,14 +18,14 @@ Table of Contents
    - [Links](first.md#links)
    - [Images](first.md#images)
    - [Plugins](first.md#plugins)
-     - [[Emojies](https://github.com/markdown-it/markdown-it-emoji)](first.md#emojieshttpsgithubcommarkdown-itmarkdown-it-emoji)
-     - [[Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)](first.md#subscripthttpsgithubcommarkdown-itmarkdown-it-sub--superscripthttpsgithubcommarkdown-itmarkdown-it-sup)
-     - [[\<ins>](https://github.com/markdown-it/markdown-it-ins)](first.md#%5Cinshttpsgithubcommarkdown-itmarkdown-it-ins)
-     - [[\<mark>](https://github.com/markdown-it/markdown-it-mark)](first.md#%5Cmarkhttpsgithubcommarkdown-itmarkdown-it-mark)
-     - [[Footnotes](https://github.com/markdown-it/markdown-it-footnote)](first.md#footnoteshttpsgithubcommarkdown-itmarkdown-it-footnote)
-     - [[Definition lists](https://github.com/markdown-it/markdown-it-deflist)](first.md#definition-listshttpsgithubcommarkdown-itmarkdown-it-deflist)
-     - [[Abbreviations](https://github.com/markdown-it/markdown-it-abbr)](first.md#abbreviationshttpsgithubcommarkdown-itmarkdown-it-abbr)
-     - [[Custom containers](https://github.com/markdown-it/markdown-it-container)](first.md#custom-containershttpsgithubcommarkdown-itmarkdown-it-container)
+     - [Emojies](first.md#emojies)
+     - [Subscript / Superscript](first.md#subscript--superscript)
+     - [\<ins>](first.md#%5Cins)
+     - [\<mark>](first.md#%5Cmark)
+     - [Footnotes](first.md#footnotes)
+     - [Definition lists](first.md#definition-lists)
+     - [Abbreviations](first.md#abbreviations)
+     - [Custom containers](first.md#custom-containers)
 
 [second.md](second.md#secondmd)
 -------
@@ -53,9 +53,7 @@ Table of Contents
 
 
 
- Thanks
- -------
- * vue
- * vuepress
- * vuePress-theme-reco
- * All open source projects
+
+```bash
+npm run test
+```
