@@ -1,3 +1,12 @@
+Notepad
+---------------
+
+<!-- start listify -->
+
+Table of Contents
+-----------
+  > *generated with [listify](https://github.com/ifuture-pro/listify)*
+
 [first.md](first.md#firstmd)
 -------
    - [Typographic replacements](first.md#typographic-replacements)
@@ -40,3 +49,13 @@
    - [SmartyPants](second.md#smartypants)
    - [KaTeX](second.md#katex)
    - [UML diagrams](second.md#uml-diagrams)
+<!-- end listify -->
+
+
+
+ Thanks
+ -------
+ * vue
+ * vuepress
+ * vuePress-theme-reco
+ * All open source projects

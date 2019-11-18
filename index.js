@@ -39,10 +39,13 @@ const args = minimist(process.argv.slice(2),
   });
 
 let config = {
-  maxlevel: args.maxlevel || '3',
+  maxlevel: args.maxlevel || '4',
   outFile: args.out || 'README.md',
+  title: args.title || '\nTable of Contents\n-----------\n  > *generated with [listify](https://github.com/ifuture-pro/listify)*\n',
   containRoot: args.containroot,
-  prefix: '-'
+  prefix: '-',
+  markStart: '<!-- start listify -->',
+  markEnd: '<!-- end listify -->'
 };
 
 let mdFiles = [];
