@@ -1,6 +1,14 @@
 Example
 ---------------
 
+
+```bash
+git clone https://github.com/ifuture-pro/listify.git
+cd listify
+npm install
+npm run test
+```
+
 <!-- start listify -->
 
 Table of Contents
@@ -51,9 +59,3 @@ Table of Contents
    - [UML diagrams](second.md#uml-diagrams)
 <!-- end listify -->
 
-
-
-
-```bash
-npm run test
-```

@@ -1,6 +1,8 @@
 listify
 ------------------------
 
+Generate and merge all directories to the specified file.
+
 Automatically generate a directory for the document, add it to README.md or other files.   
 
 Support for summarizing multiple documents and generating directory.
@@ -15,18 +17,26 @@ Usage
 npm install @ifuture-pro/listify
 ```
 
+*recommend*
+    
 ```bash
 # https://registry.npmjs.org/
 
-npm install @ifuture/listify
+npm install @ifuture/listify -g
 ```
 
 
 ```bash
-listify ./ --out README.md --maxlevel 3
+listify ./ --out README.md --maxlevel 4
 ```
+**options**
+- `--out` Result out file. Default: work dir README.md
+- `--maxlevel` Header level. Default: 4
+- `--title` The Title of list
+- `--containroot` Contain root path.When linked in local,change it `true`
+
 
 Demo
 ----------------
-example result out file
+Example result out file
 [demo](demo/README.md)
