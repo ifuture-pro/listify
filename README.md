@@ -34,6 +34,11 @@ listify ./ --out README.md --maxlevel 4
 - `--maxlevel` Header level. Default: 4
 - `--title` The Title of list
 - `--containroot` Contain root path.When linked in local,change it `true`
+- `--exclude` Exclude files.  
+    e.g.  
+    Ignore multi file `--exclude a.md --exclude b.md  `  
+    Support regexp. Ignore start with `_` `--exclude='^_\S*'`
+    
 
 
 Demo

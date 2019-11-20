@@ -8,13 +8,29 @@ const path = require('path');
 const generateList = require('./lib/parse');
 
 const markdownExts = ['.md', '.markdown'];
-const ignoredDirs  = ['.idea', '.git', 'node_modules'];
+const ignoredDirs  = ['.idea', '.github', 'node_modules'];
 
 
 function findMarddownFile(dirPath) {
 
   let dir = fs.readdirSync(dirPath);
-  dir = dir.filter(d => ignoredDirs.indexOf(d) < 0 && path.join(dirPath, d)!== config.outFile);
+  dir = dir
+    .filter(d => ignoredDirs.indexOf(d) < 0)
+    .filter(d => path.join(dirPath, d)!== config.outFile);
+
+  if (config.exclude){
+    let type = typeof config.exclude;
+    switch (type) {
+      case 'string':
+        dir = dir.filter(d => !(new RegExp(config.exclude).test(d)));
+        break;
+      case 'object':
+        dir = dir.filter(d => config.exclude.indexOf(d) < 0);
+        break;
+      default:
+        console.error('invalid option "exclude" ')
+    }
+  }
 
   for (let i = 0; i < dir.length; i++) {
 
@@ -37,7 +53,7 @@ function findMarddownFile(dirPath) {
 
 const args = minimist(process.argv.slice(2),
   { boolean: ['blog','containroot'],
-    string: ['title', 'maxlevel', 'out']
+    string: ['title', 'maxlevel', 'out', 'exclude']
   });
 
 let config = {
@@ -45,6 +61,7 @@ let config = {
   outFile: args.out || 'README.md',
   title: args.title || '\nTable of Contents\n-----------\n  > *generated with [listify](https://github.com/ifuture-pro/listify)*\n',
   containRoot: args.containroot,
+  exclude: args.exclude,
   prefix: '-',
   markStart: '<!-- start listify -->',
   markEnd: '<!-- end listify -->'
