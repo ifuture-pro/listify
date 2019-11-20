@@ -52,7 +52,7 @@ function findMarddownFile(dirPath) {
 
 
 const args = minimist(process.argv.slice(2),
-  { boolean: ['blog','containroot'],
+  { boolean: ['blog','containroot','suffix'],
     string: ['title', 'maxlevel', 'out', 'exclude']
   });
 
@@ -60,8 +60,9 @@ let config = {
   maxlevel: args.maxlevel || '4',
   outFile: args.out || 'README.md',
   title: args.title || '\nTable of Contents\n-----------\n  > *generated with [listify](https://github.com/ifuture-pro/listify)*\n',
-  containRoot: args.containroot,
+  containRoot: args.containroot || false,
   exclude: args.exclude,
+  suffix: args.suffix || false,
   prefix: '-',
   markStart: '<!-- start listify -->',
   markEnd: '<!-- end listify -->'

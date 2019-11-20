@@ -15,7 +15,7 @@ Table of Contents
 -----------
   > *generated with [listify](https://github.com/ifuture-pro/listify)*
 
-[first.md](first.md#firstmd)
+[first](first.md#first)
 -------
    - [Typographic replacements](first.md#typographic-replacements)
    - [Emphasis](first.md#emphasis)
@@ -35,7 +35,7 @@ Table of Contents
      - [Abbreviations](first.md#abbreviations)
      - [Custom containers](first.md#custom-containers)
 
-[second.md](second.md#secondmd)
+[second](second.md#second)
 -------
  - [Welcome to StackEdit!](second.md#welcome-to-stackedit)
  - [Files](second.md#files)
@@ -58,5 +58,6 @@ Table of Contents
    - [KaTeX](second.md#katex)
    - [UML diagrams](second.md#uml-diagrams)
 <!-- end listify -->
+
 
 
