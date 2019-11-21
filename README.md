@@ -27,7 +27,7 @@ npm install @ifuture/listify -g
 
 
 ```bash
-listify ./ --out README.md --maxlevel 4
+listify ./ 
 ```
 **options**
 - `--out` Result out file. Default: work dir README.md

@@ -49,12 +49,31 @@ function findMarddownFile(dirPath) {
   }
 }
 
+function help() {
+  console.log('Usage: listify <path>  [options]\n' +
+    'options:\n'+
+    '- `--out` Result out file. Default: work dir README.md\n' +
+    '- `--maxlevel` Header level. Default: 4\n' +
+    '- `--title` The Title of list\n' +
+    '- `--containroot` Contain root path.When linked in local,change it `true`.Default: `false`\n' +
+    '- `--suffix` contain file suffix in out file.Default: `false`\n' +
+    '- `--exclude` Exclude files.  \n' +
+    '    e.g.  \n' +
+    '    Ignore multi file `--exclude a.md --exclude b.md  `  \n' +
+    '    Support regexp. Ignore start with `_` `--exclude=\'^_\\S*\'`');
+  process.exit(0);
+}
+
 
 
 const args = minimist(process.argv.slice(2),
-  { boolean: ['blog','containroot','suffix'],
+  { boolean: ['h','help','blog','containroot','suffix'],
     string: ['title', 'maxlevel', 'out', 'exclude']
   });
+
+if (args.h || args.help) {
+  help();
+}
 
 let config = {
   maxlevel: args.maxlevel || '4',
@@ -85,7 +104,10 @@ for (let i = 0; i < args._.length; i++) {
     mdFiles = [{path: root}];
   }
 }
-
+if (mdFiles.length <=0 ) {
+  console.log('Can not found markdown file.Do nothing!')
+  process.exit(0);
+}
 generateList({markdownFiles:mdFiles, options: config});
 
 
