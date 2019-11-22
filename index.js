@@ -60,7 +60,8 @@ function help() {
     '- `--exclude` Exclude files.  \n' +
     '    e.g.  \n' +
     '    Ignore multi file `--exclude a.md --exclude b.md  `  \n' +
-    '    Support regexp. Ignore start with `_` `--exclude=\'^_\\S*\'`');
+    '    Support regexp. Ignore start with `_` `--exclude=\'^_\\S*\'`\n' +
+    '- `--blog` parse YAML `frontmatter` block in the Markdown file.  ');
   process.exit(0);
 }
 
@@ -82,6 +83,7 @@ let config = {
   containRoot: args.containroot || false,
   exclude: args.exclude,
   suffix: args.suffix || false,
+  blog: args.blog || false,
   prefix: '-',
   markStart: '<!-- start listify -->',
   markEnd: '<!-- end listify -->'
@@ -101,7 +103,7 @@ for (let i = 0; i < args._.length; i++) {
   if (stat.isDirectory()) {
     findMarddownFile(root);
   }else {
-    mdFiles = [{path: root}];
+    mdFiles = [root];
   }
 }
 if (mdFiles.length <=0 ) {

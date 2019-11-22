@@ -39,6 +39,8 @@ listify ./
     e.g.  
     Ignore multi file `--exclude a.md --exclude b.md  `  
     Support regexp. Ignore start with `_` `--exclude='^_\S*'`
+- `--blog` parse YAML `frontmatter` block in the Markdown file.  
+    Front matter options `title`,`publish`
     
 
 
