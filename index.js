@@ -68,7 +68,7 @@ function help() {
 
 
 const args = minimist(process.argv.slice(2),
-  { boolean: ['h','help','blog','containroot','suffix'],
+  { boolean: ['h','help','blog','containroot','suffix', 'package'],
     string: ['title', 'maxlevel', 'out', 'exclude']
   });
 
@@ -84,6 +84,7 @@ let config = {
   exclude: args.exclude,
   suffix: args.suffix || false,
   blog: args.blog || false,
+  package: args.package || false,
   prefix: '-',
   markStart: '<!-- start listify -->',
   markEnd: '<!-- end listify -->'

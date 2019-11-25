@@ -41,6 +41,8 @@ listify ./
     Support regexp. Ignore start with `_` `--exclude='^_\S*'`
 - `--blog` parse YAML `frontmatter` block in the Markdown file.  
     Front matter options `title`,`publish`
+- `--package` Parent directory as the first header
+
     
 
 
