@@ -1,5 +1,8 @@
 <h1 align="center">Welcome to @ifuture/listify 👋</h1>
 <p align="center">
+    <a href="https://github.com/ifuture-pro/listify/actions" target="_blank">
+    <img alt="Version" src="https://github.com/ifuture-pro/listify/workflows/Node.js%20Package/badge.svg">
+  </a>
   <a href="https://www.npmjs.com/package/@ifuture/listify" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/@ifuture/listify.svg">
   </a>
@@ -13,8 +16,6 @@
     <img alt="License: MIT" src="https://img.shields.io/github/license/ifuture-pro/listify" />
   </a>
 </p>
-
-[![](https://github.com/ifuture-pro/listify/workflows/Node.js%20Package/badge.svg)](https://github.com/ifuture-pro/listify/actions)
 
 > Auto generate table of contents  
 > Generate and merge all directories to the specified file.
