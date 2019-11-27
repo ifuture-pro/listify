@@ -46,6 +46,7 @@ listify ./
 - `--blog` parse YAML `frontmatter` block in the Markdown file.  
     Front matter options `title`,`publish`
 - `--package` Parent directory as the first header
+- `--exclude_dir` Exclude dir.
 
     
 

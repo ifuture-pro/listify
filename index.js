@@ -61,7 +61,10 @@ function help() {
     '    e.g.  \n' +
     '    Ignore multi file `--exclude a.md --exclude b.md  `  \n' +
     '    Support regexp. Ignore start with `_` `--exclude=\'^_\\S*\'`\n' +
-    '- `--blog` parse YAML `frontmatter` block in the Markdown file.  ');
+    '- `--blog` parse YAML `frontmatter` block in the Markdown file.  \n' +
+    '    Front matter options `title`,`publish`\n' +
+    '- `--package` Parent directory as the first header\n' +
+    '- `--exclude_dir` Exclude dir.');
   process.exit(0);
 }
 
@@ -69,11 +72,15 @@ function help() {
 
 const args = minimist(process.argv.slice(2),
   { boolean: ['h','help','blog','containroot','suffix', 'package'],
-    string: ['title', 'maxlevel', 'out', 'exclude']
+    string: ['title', 'maxlevel', 'out', 'exclude', 'exclude_dir']
   });
 
 if (args.h || args.help) {
   help();
+}
+
+if (args.exclude_dir) {
+  ignoredDirs.push(args.exclude_dir);
 }
 
 let config = {
