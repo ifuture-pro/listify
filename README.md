@@ -20,7 +20,9 @@
 > Auto generate table of contents  
 > Generate and merge all directories to the specified file.
 
-### ✨ [Demo](demo/README.md)
+### ✨ Example
+* [Demo](demo/README.md)
+* [Example with Docsify](https://developer.ifuture.pro/)
 
 ## Install
 
