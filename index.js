@@ -97,6 +97,8 @@ let config = {
   markEnd: '<!-- end listify -->'
 };
 
+console.log('Current Config : ' + config);
+
 let mdFiles = [];
 for (let i = 0; i < args._.length; i++) {
   let root = args._[i];
@@ -119,5 +121,3 @@ if (mdFiles.length <=0 ) {
   process.exit(0);
 }
 generateList({markdownFiles:mdFiles, options: config});
-
-

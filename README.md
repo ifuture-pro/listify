@@ -1,10 +1,13 @@
-<h1 align="center">Welcome to @ifuture/listify 👋</h1>
+<h1 align="center">Welcome to listify 👋</h1>
 <p align="center">
     <a href="https://github.com/ifuture-pro/listify/actions" target="_blank">
     <img alt="Version" src="https://github.com/ifuture-pro/listify/workflows/Node.js%20Package/badge.svg">
   </a>
   <a href="https://www.npmjs.com/package/@ifuture/listify" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/@ifuture/listify.svg">
+  </a>
+  <a href="https://www.npmjs.com/package/@ifuture/listify" target="_blank">
+    <img alt="npm" src="https://img.shields.io/npm/dt/@ifuture/listify">
   </a>
   <a href="https://github.com/ifuture-pro/listify#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
@@ -33,7 +36,7 @@ npm install @ifuture/listify -g
 ## Usage
 
 ```sh
-listify ./ 
+listify ./
 ```
 **options**
 - `--out` Result out file. Default: work dir README.md
@@ -50,7 +53,12 @@ listify ./
 - `--package` Parent directory as the first header
 - `--exclude_dir` Exclude dir.
 
-    
+## Github actions
+[GitHub Actions](https://github.com/features/actions) makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want.
+
+When you push document . It will generate list of contents to specified file.
+[Marketplace](https://github.com/marketplace/actions/listify-actions) :fire:
+
 
 ## Author
 
@@ -69,4 +77,7 @@ Copyright © 2019 [ifuture](https://github.com/ifuture-pro).<br />
 This project is [MIT](https://github.com/ifuture-pro/listify/blob/master/LICENSE) licensed.
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
+## Thanks
+
+[readme-md-generator](https://github.com/kefranabg/readme-md-generator) ❤️
