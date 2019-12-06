@@ -97,7 +97,12 @@ let config = {
   markEnd: '<!-- end listify -->'
 };
 
-console.log('Current Config : ' + config);
+console.log('Current Config : ' );
+Object.keys(config).forEach(function(key){
+
+     console.log(key + ": " + config[key]);
+
+});
 
 let mdFiles = [];
 for (let i = 0; i < args._.length; i++) {
