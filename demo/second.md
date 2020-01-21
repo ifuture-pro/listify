@@ -1,3 +1,37 @@
+<!-- start listify -->
+
+Table of Contents
+-----------
+  > *generated with [listify](https://github.com/ifuture-pro/listify)*
+
+# [second](second.md#second)
+
+   - [Table of Contents](second.md#table-of-contents)
+ - [second](second.md#second)
+ - [Welcome to StackEdit!](second.md#welcome-to-stackedit)
+ - [Files](second.md#files)
+   - [Create files and folders](second.md#create-files-and-folders)
+   - [Switch to another file](second.md#switch-to-another-file)
+   - [Rename a file](second.md#rename-a-file)
+   - [Delete a file](second.md#delete-a-file)
+   - [Export a file](second.md#export-a-file)
+ - [Synchronization](second.md#synchronization)
+   - [Open a file](second.md#open-a-file)
+   - [Save a file](second.md#save-a-file)
+   - [Synchronize a file](second.md#synchronize-a-file)
+   - [Manage file synchronization](second.md#manage-file-synchronization)
+ - [Publication](second.md#publication)
+   - [Publish a File](second.md#publish-a-file)
+   - [Update a publication](second.md#update-a-publication)
+   - [Manage file publication](second.md#manage-file-publication)
+ - [Markdown extensions](second.md#markdown-extensions)
+   - [SmartyPants](second.md#smartypants)
+   - [KaTeX](second.md#katex)
+   - [UML diagrams](second.md#uml-diagrams)
+<!-- end listify -->
+
+
+
 # Welcome to StackEdit!
 
 Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.

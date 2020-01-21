@@ -1,3 +1,34 @@
+<!-- start listify -->
+
+Table of Contents
+-----------
+  > *generated with [listify](https://github.com/ifuture-pro/listify)*
+
+# [first](first.md#first)
+
+   - [Table of Contents](first.md#table-of-contents)
+ - [first](first.md#first)
+   - [Typographic replacements](first.md#typographic-replacements)
+   - [Emphasis](first.md#emphasis)
+   - [Blockquotes](first.md#blockquotes)
+   - [Lists](first.md#lists)
+   - [Code](first.md#code)
+   - [Tables](first.md#tables)
+   - [Links](first.md#links)
+   - [Images](first.md#images)
+   - [Plugins](first.md#plugins)
+     - [Emojies](first.md#emojies)
+     - [Subscript / Superscript](first.md#subscript--superscript)
+     - [\<ins>](first.md#%5Cins)
+     - [\<mark>](first.md#%5Cmark)
+     - [Footnotes](first.md#footnotes)
+     - [Definition lists](first.md#definition-lists)
+     - [Abbreviations](first.md#abbreviations)
+     - [Custom containers](first.md#custom-containers)
+<!-- end listify -->
+
+
+
 ## Typographic replacements
 
 Enable typographer option to see result.

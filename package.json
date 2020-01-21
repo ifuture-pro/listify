@@ -1,10 +1,10 @@
 {
   "name": "@ifuture/listify",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Auto generate table of contents at full-site",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js ./demo/ --package"
+    "test": "node index.js ./demo/ --package --merge=false --single"
   },
   "bin": {
     "listify": "index.js"

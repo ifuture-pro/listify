@@ -51,6 +51,8 @@ listify ./
 - `--blog` parse YAML `frontmatter` block in the Markdown file.  
     Front matter options `title`,`publish`
 - `--package` Parent directory as the first header
+- `--single` Directories in single. Default:false
+- `--merge` Merge directories. Default:true
 - `--exclude_dir` Exclude dir.
 
 ## Github actions

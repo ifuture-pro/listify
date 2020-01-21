@@ -53,25 +53,27 @@ function help() {
   console.log('Usage: listify <path>  [options]\n' +
     'options:\n'+
     '- `--out` Result out file. Default: work dir README.md\n' +
-    '- `--maxlevel` Header level. Default: 4\n' +
-    '- `--title` The Title of list\n' +
-    '- `--containroot` Contain root path.When linked in local,change it `true`.Default: `false`\n' +
-    '- `--suffix` contain file suffix in out file.Default: `false`\n' +
-    '- `--exclude` Exclude files.  \n' +
-    '    e.g.  \n' +
-    '    Ignore multi file `--exclude a.md --exclude b.md  `  \n' +
-    '    Support regexp. Ignore start with `_` `--exclude=\'^_\\S*\'`\n' +
-    '- `--blog` parse YAML `frontmatter` block in the Markdown file.  \n' +
-    '    Front matter options `title`,`publish`\n' +
-    '- `--package` Parent directory as the first header\n' +
-    '- `--exclude_dir` Exclude dir.');
+      '- `--maxlevel` Header level. Default: 4\n' +
+      '- `--title` The Title of list\n' +
+      '- `--containroot` Contain root path.When linked in local,change it `true`.Default: `false`\n' +
+      '- `--suffix` contain file suffix in out file.Default: `false`\n' +
+      '- `--exclude` Exclude files.  \n' +
+      '    e.g.  \n' +
+      '    Ignore multi file `--exclude a.md --exclude b.md  `  \n' +
+      '    Support regexp. Ignore start with `_` `--exclude=\'^_\\S*\'`\n' +
+      '- `--blog` parse YAML `frontmatter` block in the Markdown file.  \n' +
+      '    Front matter options `title`,`publish`\n' +
+      '- `--package` Parent directory as the first header\n' +
+      '- `--single` Directories in single. Default:false\n' +
+      '- `--merge` Merge directories. Default:true\n' +
+      '- `--exclude_dir` Exclude dir.');
   process.exit(0);
 }
 
 
 
 const args = minimist(process.argv.slice(2),
-  { boolean: ['h','help','blog','containroot','suffix', 'package'],
+  { boolean: ['h','help','blog','containroot','suffix', 'package','merge'],
     string: ['title', 'maxlevel', 'out', 'exclude', 'exclude_dir']
   });
 
@@ -92,6 +94,8 @@ let config = {
   suffix: args.suffix || false,
   blog: args.blog || false,
   package: args.package || false,
+  merge: args.merge || true,
+  single: args.single || false,
   prefix: '-',
   markStart: '<!-- start listify -->',
   markEnd: '<!-- end listify -->'
