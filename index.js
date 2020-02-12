@@ -82,7 +82,7 @@ if (args.h || args.help) {
 }
 
 if (args.exclude_dir) {
-  ignoredDirs.push(args.exclude_dir);
+  ignoredDirs.push.apply(ignoredDirs,args.exclude_dir);
 }
 
 let config = {
