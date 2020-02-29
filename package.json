@@ -1,6 +1,6 @@
 {
   "name": "@ifuture/listify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Auto generate table of contents at full-site",
   "main": "index.js",
   "scripts": {
