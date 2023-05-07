@@ -20,7 +20,7 @@
   "author": "ifuture",
   "license": "MIT",
   "dependencies": {
-    "@textlint/markdown-to-ast": "^6.1.6",
+    "@textlint/markdown-to-ast": "^13.3.2",
     "emoji-regex": "^8.0.0",
     "fs": "^0.0.1-security",
     "minimist": "^1.2.0",
